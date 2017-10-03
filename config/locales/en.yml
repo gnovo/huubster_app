@@ -11,13 +11,13 @@ en:
     how_works: "How Does It Work?"
     # Home How_Works partial
     how_works_h_1: "Tell us where and when"
-    how_works_sh_1: "Informa-nos sobre os carros que queres avaliar e sobre a tua disponibilidade"
-    how_works_h_2: "Connectamos-te com o mecânico certo para ti"
-    how_works_sh_2: "Em menos de 48h enviamos um mecânico experiente para te acompanhar"
-    how_works_h_3: "Recebes as avaliações"
-    how_works_sh_3: "Enviamos-te um relatório profissional detalhado feito por um dos nossos especialistas"
-    how_works_h_4: "Decides o que fazer"
-    how_works_sh_4: "Agora que tens toda a informação, podes decidir com confiança!"
+    how_works_sh_1: "Let us know about the cars you want to assess and your availability."
+    how_works_h_2: "We match you to the right mechanic"
+    how_works_sh_2: "We send an experienced mechanic to accompany you in less than 48 hours."
+    how_works_h_3: "You receive an assessment"
+    how_works_sh_3: "Get a detailed professional assessment of the car from one of our specialists."
+    how_works_h_4: "You decide what to do"
+    how_works_sh_4: "Now that you have all the information, you can decide confidently!"
 
     pricing: "Pricing"
     # Home Pricing partial
