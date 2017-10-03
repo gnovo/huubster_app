@@ -1,0 +1,18 @@
+/* HOME HOW-WORKS */
+.wrapper-how-works {
+  display: flex;
+  justify-content: center;
+  h4 {
+  	bottom: 0;
+  	width: 100%;
+  }
+  img {
+  	display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.how-works {
+  padding-left: 10px;
+  padding-right: 10px;
+}

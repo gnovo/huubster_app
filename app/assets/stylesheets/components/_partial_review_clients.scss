@@ -1,0 +1,25 @@
+/* HOME HOW-WORKS */
+.wrapper-review-clients {
+  display: flex;
+  justify-content: center;
+  p {
+    align-items: flex-end;
+  }
+  img {
+  	display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.review-clients {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.client-picture {
+  border-radius: 50%;
+}
+.fa-star {
+  color: $sea-serpent;
+  padding-left: 3px;
+  padding-right: 3px;
+}
