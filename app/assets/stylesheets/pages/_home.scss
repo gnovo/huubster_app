@@ -48,7 +48,6 @@ p {
   color: $black;
   margin:20px;
 }
-/* General CSS */
 .subheading {
   font-size: 42px;
   font-weight: bold;
@@ -103,6 +102,21 @@ section.blue {
   height: 500px;
 }
 
+/* HOME HOW-WORKS */
+.wrapper-how-works {
+  display: flex;
+  justify-content: center;
+  p {
+    align-items: flex-end;
+  }
+}
+.how-works p {
+ align-items: flex-end;
+}
+.how-works img {
+  justify-content: center;
+}
+
 /* Reviews */
 .review img {
   width: 150px;
@@ -149,7 +163,7 @@ section.blue {
   font-style: italic;
 }
 
-/* Dropdown menu */
+/* HOME FAQ */
 button.accordion {
   background-color: #eee;
   color: #444;
@@ -186,7 +200,7 @@ div.panel {
 }
 
 
-/* Pricing */
+/* HOME PRICING */
 .wrapper-pricing {
   // position: absolute;
   // top: 50%;
