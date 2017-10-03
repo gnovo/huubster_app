@@ -1,24 +1,63 @@
-<div class="navbar-wagon">
+<div class="navbar-huubster">
   <!-- Logo -->
-  <%= link_to root_path, class: "navbar-wagon-brand" do %>
+  <%= link_to root_path, class: "navbar-huubster-brand" do %>
     <%= image_tag "logo.png" %>
   <% end %>
 
   <!-- Right Navigation -->
-  <div class="navbar-wagon-right hidden-xs hidden-sm">
+  <div class="navbar-huubster-right hidden-xs hidden-sm">
 
-    <% if user_signed_in? %>
 
-      <!-- Links when logged in -->
-      <%= link_to "Host", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Trips", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Messages", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+    <% if I18n.locale == :pt %>
+      <%= link_to url_for(locale: :en), class: "navbar-huubster-item navbar-huubster-link"  do %>
+        <span class="fa fa-globe">&nbsp;&nbsp;</span>
+          PT
+      <% end %>
+
+      <%= link_to 'SOU MECÂNICO'.html_safe, about_path, id: "navbar-huubster-mechanic" %>
+      <%= link_to 'COMO FUNCIONA'.html_safe, about_path, class: "navbar-huubster-item navbar-huubster-link" %>
+      <%= link_to 'PREÇOS'.html_safe, pricing_path, class: "navbar-huubster-item navbar-huubster-link" %>
+      <%= link_to 'CRÍTICAS'.html_safe, pricing_path, class: "navbar-huubster-item navbar-huubster-link" %>
+      <%= link_to 'MARCAÇÃO'.html_safe, pricing_path, class: "navbar-huubster-item navbar-huubster-link" %>
+      <%= link_to 'PERGUNTAS FREQUENTES'.html_safe, faq_path, class: "navbar-huubster-item navbar-huubster-link" %>
+
+    <% else %>
+      <%= link_to url_for(locale: :pt), class: "navbar-huubster-item navbar-huubster-link" do %>
+        <span class="fa fa-globe">&nbsp;&nbsp;</span>
+          EN
+      <% end %>
+
+      <%= link_to 'I AM A MECHANIC'.html_safe, about_path, id: "navbar-huubster-mechanic" %>
+      <%= link_to 'HOW IT WORKS'.html_safe, about_path, class: "navbar-huubster-item navbar-huubster-link" %>
+      <%= link_to 'PRICING'.html_safe, pricing_path, class: "navbar-huubster-item navbar-huubster-link" %>
+      <%= link_to 'REVIEWS'.html_safe, pricing_path, class: "navbar-huubster-item navbar-huubster-link" %>
+      <%= link_to 'BOOKING'.html_safe, pricing_path, class: "navbar-huubster-item navbar-huubster-link" %>
+      <%= link_to 'FAQ'.html_safe, faq_path, class: "navbar-huubster-item navbar-huubster-link" %>
+    <% end %>
+
+    <!-- Links when logged in -->
+    <% if I18n.locale == :pt && user_signed_in?%>
+      <%= link_to 'REVIEWS'.html_safe, pricing_path, class: "navbar-huubster-item navbar-huubster-link" %>
+      <%= link_to 'BOOKING'.html_safe, pricing_path, class: "navbar-huubster-item navbar-huubster-link" %>
+      <%= link_to 'FAQ'.html_safe, faq_path, class: "navbar-huubster-item navbar-huubster-link" %>
+
+
+<!--         <ul>
+            <li><a class="active" href="#intro">SOBRE</a></li>
+            <li><a href="#how-works">COMO FUNCIONA</a></li>
+            <li><a href="#pricing">PREÇOS</a></li>
+            <li><a href="#review">CRÍTICAS</a></li>
+            <li><a href="#booking">MARCAÇÃO</a></li>
+            <li><a href="#faq">PERGUNTAS FREQUENTES</a></li>
+        </ul>
+     -->
+
 
       <!-- Avatar with dropdown menu -->
-      <div class="navbar-wagon-item">
+      <div class="navbar-huubster-item">
         <div class="dropdown">
-          <%= image_tag "http://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
-          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <%= image_tag "joao_ramadas.jpg", class: "avatar dropdown-toggle", id: "navbar-huubster-menu", "data-toggle" => "dropdown" %>
+          <ul class="dropdown-menu dropdown-menu-right navbar-huubster-dropdown-menu">
             <li>
               <%= link_to "#" do %>
                 <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
@@ -39,15 +78,15 @@
       </div>
     <% else %>
       <!-- Login link (when logged out) -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to t(".sign_in", default: "INICIAR SESSÃO"), new_user_session_path, class: "navbar-huubster-item navbar-huubster-link" %>
     <% end %>
   </div>
 
   <!-- Dropdown list appearing on mobile only -->
-  <div class="navbar-wagon-item hidden-md hidden-lg">
+  <div class="navbar-huubster-item hidden-md hidden-lg">
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
-      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+      <ul class="dropdown-menu dropdown-menu-right navbar-huubster-dropdown-menu">
         <li><a href="#">Some mobile link</a></li>
         <li><a href="#">Other one</a></li>
         <li><a href="#">Other one</a></li>
@@ -56,3 +95,30 @@
   </div>
 </div>
 
+<% content_for :after_js do %>
+  <script>
+    $(document).ready(function(){
+      $(window).scroll(function(){
+        var scroll = $(window).scrollTop();
+        if (scroll > 20) {
+          $(".navbar-huubster").css("background" , "rgba(230,230,230,1) ");
+          $(".navbar-huubster-link").css("color" , "rgb(0,5,5)");
+          $(".navbar-huubster-item").css("text-shadow" , "none");
+          $("#navbar-huubster-mechanic").css("color" , "rgb(0,5,5)");
+          $("#navbar-huubster-mechanic").css("text-shadow" , "none");
+          $("#navbar-huubster-mechanic").css("border" , "1px solid rgb(0, 5, 5)");
+        }
+
+        else{
+          $(".navbar-huubster").css("background" , "transparent");
+          $(".navbar-huubster-link").css("color" , "white");
+          $(".navbar-huubster-item").css("text-shadow" , "2px 2px 0 rgba(0,0,0,0.4)");
+          $("#navbar-huubster-mechanic").css("color" , "white");
+          $("#navbar-huubster-mechanic").css("text-shadow" , "2px 2px 0 rgba(0,0,0,0.4)");
+          $("#navbar-huubster-mechanic").css("border" , "1px solid white");
+
+        }
+      })
+    })
+  </script>
+<% end %>
