@@ -2,8 +2,9 @@
 .wrapper-how-works {
   display: flex;
   justify-content: center;
-  p {
-    align-items: flex-end;
+  h4 {
+  	bottom: 0;
+  	width: 100%;
   }
   img {
   	display: block;
