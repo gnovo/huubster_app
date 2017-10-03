@@ -73,28 +73,6 @@ p {
 .intro, .pricing, .interested {
   background-color: rgb(245,245,245);
 }
-// .cd-words-wrapper {
-//   display: inline-block;
-//   position: relative;
-//   text-align: left;
-// }
-// .cd-words-wrapper b {
-//   display: inline-block;
-//   position: absolute;
-//   white-space: nowrap;
-//   color: $blue;
-//   left: 0;
-//   top: 0;
-// }
-// .cd-words-wrapper b.is-visible {
-//   position: relative;
-// }
-// .no-js .cd-words-wrapper b {
-//   opacity: 0;
-// }
-// .no-js .cd-words-wrapper b.is-visible {
-//   opacity: 1;
-// }
 
 
 section.blue {
@@ -104,51 +82,7 @@ section.blue {
 
 
 
-/* Reviews */
-.review img {
-  width: 150px;
-  height: 150px;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-radius: 50%;
-}
-.news-logos {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.news-logos-img {
-  opacity: 0.5;
-  padding-right: 10px;
-  padding-left: 10px;
-  &:hover {
-    opacity: 1;
-  }
-}
-.review h4 {
-  font-size: 18px;
-  color: white;
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
-.review h5 {
-  font-size: 14px;
-  color: white;
-    margin-bottom: 10px;
-  margin-top: 10px;
-}
-.review p {
-  font-size: 18px;
-  color: white;
-  font-style: italic;
-}
+
 
 .txt-rotate {
   color: $blue;
