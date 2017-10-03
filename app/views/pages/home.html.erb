@@ -1,2 +1,66 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner-wrapper">
+  <h1 class="text-white">Comprar um carro usado está a dar-te dores de cabeça?</h1>
+
+  <section class="cd-intro">
+    <h2 class="cd-headline rotate-1">
+      <span class="text-white">Sabemos tudo sobre</span>
+      <span class="cd-words-wrapper">
+        <b class="is-visible">motores</b>
+        <b>travões</b>
+        <b>óleo da embraiagem</b>
+        <b>alavancas de velocidades</b>
+      </span>
+      <span class="text-white">.</span>
+    </h2>
+  </section>
+
+  <button type="button" class="btn btn-primary btn-lg">Pede uma avaliação</button>
+  <%= video_tag("banner_home.mp4", autoplay: true, loop: true) %>
+</div>
+
+<% content_for :after_js do %>
+  <script>
+    var animationDelay = 3500;
+     
+    animateHeadline($('.cd-headline'));
+     
+    function animateHeadline($headlines) {
+      $headlines.each(function(){
+        var headline = $(this);
+        //trigger animation
+        setTimeout(function(){ hideWord( headline.find('.is-visible') ) }, animationDelay);
+        //other checks here ...
+      });
+    }
+
+    function hideWord($word) {
+      var nextWord = takeNext($word);
+      switchWord($word, nextWord);
+      setTimeout(function(){ hideWord(nextWord) }, animationDelay);
+    }
+     
+    function takeNext($word) {
+      return (!$word.is(':last-child')) ? $word.next() : $word.parent().children().eq(0);
+    }
+     
+    function switchWord($oldWord, $newWord) {
+      $oldWord.removeClass('is-visible').addClass('is-hidden');
+      $newWord.removeClass('is-hidden').addClass('is-visible');
+    }
+
+    singleLetters($('.cd-headline.letters').find('b'));
+     
+    function singleLetters($words) {
+      $words.each(function(){
+        var word = $(this),
+          letters = word.text().split(''),
+          selected = word.hasClass('is-visible');
+        for (i in letters) {
+          letters[i] = (selected) ? '<i class="in">' + letters[i] + '</i>': '<i>' + letters[i] + '</i>';
+        }
+          var newLetters = letters.join('');
+          word.html(newLetters);
+      });
+    }
+  </script>
+<% end %>
