@@ -1,2 +1,77 @@
 pt:
-  hello: "Hello world"
+  home:
+    banner_heading: "Comprar um carro usado está a dar-te dores de cabeça?"
+    banner_subheading: "Sabemos tudo sobre"
+    banner_subheading_word1: "travões"
+    banner_subheading_word2: "óleo da embraiagem"
+    banner_subheading_word3: "alavancas de velocidades"
+    banner_subheading_word4: "faróis"
+    button_bookings: "Pede uma avaliação"
+
+    how_works: "Como Funciona?"
+    # Home How_Works partial
+    how_works_h_1: "Diz-nos onde e quando"
+    how_works_sh_1: "Informa-nos sobre os carros que queres avaliar e sobre a tua disponibilidade"
+    how_works_h_2: "Connectamos-te com o mecânico certo para ti"
+    how_works_sh_2: "Em menos de 48h enviamos um mecânico experiente para te acompanhar"
+    how_works_h_3: "Recebes as avaliações"
+    how_works_sh_3: "Enviamos-te um relatório profissional detalhado feito por um dos nossos especialistas"
+    how_works_h_4: "Decides o que fazer"
+    how_works_sh_4: "Agora que tens toda a informação, podes decidir com confiança!"
+
+    pricing: "Preços"
+    # Home Pricing partial
+    assessment_1_price: "€59"
+    assessment_1_location: "AVALIAÇÃO NO LOCAL"
+    assessment_1_tag: "A mais flexível"
+    assessment_2_price: "€89"
+    assessment_2_location: "AVALIAÇÃO EM OFICINA"
+    assessment_2_tag: "A mais completa"
+    assessment_p1_html: "Condições de <strong>interiores</strong>"
+    assessment_p2_html: "Condições de <strong>exteriores</strong>"
+    assessment_p3_html: "Funcionamento eléctrico"
+    assessment_p4_html: "Aspectos mecânicos"
+    assessment_p5_html: "Estimativa dos custos de arranjo"
+    assessment_p6_html: "Informação sobre valor de mercado"
+    assessment_p7_html: "<strong>Vamos ter contigo</strong> onde quiseres"
+    assessment_p8_html: "Diagnóstico electrónico"
+    assessment_p9_html: "Orçamento dos custos de arranjo"
+    assessment_p10_html: "15% de desconto nos arranjos"
+    assessment_p11_html: "Orçamento dos custos de arranjo"
+    assessment_p12_html: "<strong>Vens ter connosco</strong> a Odivelas"
+
+    location: "Localização"
+
+    client_reviews: "O que os nossos clientes dizem sobre nós"
+
+    press_news: "Eles falam sobre a Huubster"
+
+    bookings: "Marcações"
+
+    faq: "Perguntas Frequentes"
+    # Home FAQ partial
+    question_1: "Com que tempo de antecedência devo pedir a avaliação?"
+    answer_1: "48h de antecedência, no mínimo, para garantirmos que conseguimos arranjar o mecânico certo para ti."
+    question_2: "Onde estão disponíveis as avaliações?"
+    answer_2: "As avaliações estão disponíveis em Lisboa, Oeiras, Sintra, Cascais e Margem Sul."
+    question_3: "Que garantias me oferecem?"
+    answer_3: "Caso a avaliação não aconteça por culpa nossa ou não seja feita de acordo com os nossos padrões de qualidade, devolvemos-te o dinheiro."
+    question_4: "Onde é feita a avaliação?"
+    answer_4: "Onde tu quiseres. Vamos ao teu encontro e do vendedor."
+    question_5: "O que inclui a avaliação?"
+    answer_5: "A avaliação inclui parâmetros."
+
+    interested: "Interessado?"
+    interested_p1: "Estamos sempre disponíveis para conversar contigo ou responder às tuas questões na nossa plataforma, Facebook, ou através de email."
+    interested_p2: "Quer estejas a pensar comprar um carro, ou apenas queiras dizer olá, estamos aqui para ti."
+
+  privacy:
+  terms:
+    header_1: "Huubster Terms of Service"
+    subheader_1: "1. Terms"
+    # p_1_html: "By accessing the website at <a href="http://www.huubster.com">http://www.huubster.com</a>, you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this website are protected by applicable copyright and trademark law."
+    subheader_2: "2. Use License"
+    li_1: "Permission is granted to temporarily download one copy of the materials (information or software) on Huubster's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:"
+    li_1a: "modify or copy the materials;"
+    li_1b: "use the materials for any commercial purpose, or for any public display (commercial or non-commercial);"
+    li_1c:
