@@ -18,8 +18,47 @@
   <%= video_tag("banner_home.mp4", autoplay: true, loop: true) %>
 </div>
 
+<div class="container">
+  <h3 class="subheading text-center">Como Funciona</h3>
+  <%= render "how_works" %>
+</div>
+
+<div class="pricing">
+  <div class="container">
+    <h3 class="subheading text-center">Preços</h3>
+    <%= render "pricing" %>
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="subheading text-center">O que os nossos clientes dizem sobre nós</h3>
+</div>
+<%= render "review_clients" %>
+
+<div class="interested">
+  <div class="container">
+    <h3 class="subheading text-center">Eles falam sobre a Huubster</h3>
+    <%= render "review_media" %>
+</div>
+
+<div class="interested">
+  <div class="container">
+    <h3 class="subheading text-center">Perguntas Frequentes</h3>
+    <%= render "faq" %>
+  </div>
+</div>
+
+<div class="interested">
+  <div class="container">
+    <h3 class="subheading text-center">Interessado?</h3>
+    <p>We're always available to hear about you or answer your questions on our web platform, Facebook, or through email.</p>
+    <p>If you are considering buying a car, or just want to say hi, we're here for you.</p>
+  </div>
+</div>
+
 <% content_for :after_js do %>
   <script>
+    /* Banner Animation */
     var animationDelay = 3500;
      
     animateHeadline($('.cd-headline'));
@@ -61,6 +100,22 @@
           var newLetters = letters.join('');
           word.html(newLetters);
       });
+    }
+
+    /* Accordion */
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+      }
     }
   </script>
 <% end %>
