@@ -90,10 +90,13 @@ h6 {
 .home {
   margin-top: 75px;
 }
-.intro, .pricing, .interested {
-  background-color: rgb(245,245,245);
+.intro, .interested {
+  background-color: #e8e8e8;
 }
 
+.pricing {
+  background-color: $sea-serpent;
+}
 
 section.blue {
   background: blue;

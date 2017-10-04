@@ -27,16 +27,16 @@
   </div>
 </section>
 
-<section id="pricing" style="padding-top: 60px">
-  <div class="pricing">
+<section id="pricing" class="pricing" style="padding-top: 60px; padding-bottom: 60px">
+  <div>
     <div class="container">
-      <h3 class="subheading text-center" style="padding-bottom: 12px"><%= t('home.pricing') %></h3>
+      <h3 class="subheading text-center text-white" style="padding-bottom: 12px"><%= t('home.pricing') %></h3>
       <%= render "pricing" %>
     </div>
   </div>
 </section>
 
-<section id="reviews" style="padding-top: 60px">
+<section id="reviews" class="interested" style="padding-top: 60px">
   <div class="container">
     <h3 class="subheading text-center"><%= t('home.client_reviews') %></h3>
   </div>
@@ -51,6 +51,10 @@
 </section>
 
 <section id="booking" style="padding-top: 60px">
+  <div class="container">
+    <h3 class="subheading text-center"><%= t('home.bookings') %></h3>
+  </div>
+  <%= render "booking" %>
 </section>
 
 <section id="faq" style="padding-top: 60px">
