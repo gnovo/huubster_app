@@ -1,54 +1,54 @@
 <div class="banner-wrapper">
-  <h1 class="text-white">Comprar um carro usado está a dar-te dores de cabeça?</h1>
+  <h1 class="text-white"><%= t('home.banner_heading') %></h1>
 
   <section class="cd-intro">
     <h2 class="cd-headline rotate-1">
-      <span class="text-white">Sabemos tudo sobre</span>
+      <span class="text-white"><%= t('home.banner_subheading') %></span>
       <span class="txt-rotate" data-period="2000" data-rotate='[ "motores", "travões", "óleo da embraiagem", "alavancas de velocidades" ]'></span>
       <!-- <span class="txt-rotate" data-period="2000" data-rotate='<%= [ "t('banner_subheading_word1_html')" ]%>' ></span> -->
       <!-- <span class="text-white">.</span> -->
     </h2>
   </section>
 
-  <button type="button" class="btn btn-primary btn-lg">Pede uma avaliação</button>
+  <button type="button" class="btn btn-primary btn-lg"><%= t('home.button_bookings') %></button>
   <%= video_tag("banner_home.mp4", autoplay: true, loop: true) %>
 </div>
 
 <div class="container">
-  <h3 class="subheading text-center">Como Funciona</h3>
+  <h3 class="subheading text-center"><%= t('home.how_works') %></h3>
   <%= render "how_works" %>
 </div>
 
 <div class="pricing">
   <div class="container">
-    <h3 class="subheading text-center">Preços</h3>
+    <h3 class="subheading text-center"><%= t('home.pricing') %></h3>
     <%= render "pricing" %>
   </div>
 </div>
 
 <div class="container">
-  <h3 class="subheading text-center">O que os nossos clientes dizem sobre nós</h3>
+  <h3 class="subheading text-center"><%= t('home.client_reviews') %></h3>
 </div>
 <%= render "review_clients" %>
 
 <div class="interested">
   <div class="container">
-    <h3 class="subheading text-center">Eles falam sobre a Huubster</h3>
+    <h3 class="subheading text-center"><%= t('home.media_reviews') %></h3>
     <%= render "review_media" %>
 </div>
 
 <div class="interested">
   <div class="container">
-    <h3 class="subheading text-center">Perguntas Frequentes</h3>
+    <h3 class="subheading text-center"><%= t('home.faq') %></h3>
     <%= render "faq" %>
   </div>
 </div>
 
 <div class="interested">
   <div class="container">
-    <h3 class="subheading text-center">Interessado?</h3>
-    <p>We're always available to hear about you or answer your questions on our web platform, Facebook, or through email.</p>
-    <p>If you are considering buying a car, or just want to say hi, we're here for you.</p>
+    <h3 class="subheading text-center"><%= t('home.interested') %></h3>
+    <p><%= t('home.interested_p1') %></p>
+    <p><%= t('home.interested_p2') %></p>
   </div>
 </div>
 
@@ -56,7 +56,6 @@
   <script>
     /* Banner Animation */
     var TxtRotate=function(t,e,i){this.toRotate=e,this.el=t,this.loopNum=0,this.period=parseInt(i,10)||2e3,this.txt="",this.tick(),this.isDeleting=!1};TxtRotate.prototype.tick=function(){var t=this.loopNum%this.toRotate.length,e=this.toRotate[t];this.isDeleting?this.txt=e.substring(0,this.txt.length-1):this.txt=e.substring(0,this.txt.length+1),this.el.innerHTML='<span class="wrap">'+this.txt+"</span>";var i=this,s=300-100*Math.random();this.isDeleting&&(s/=2),this.isDeleting||this.txt!==e?this.isDeleting&&""===this.txt&&(this.isDeleting=!1,this.loopNum++,s=500):(s=this.period,this.isDeleting=!0),setTimeout(function(){i.tick()},s)},window.onload=function(){for(var t=document.getElementsByClassName("txt-rotate"),e=0;e<t.length;e++){var i=t[e].getAttribute("data-rotate"),s=t[e].getAttribute("data-period");i&&new TxtRotate(t[e],JSON.parse(i),s)}var o=document.createElement("style");o.type="text/css",o.innerHTML=".txt-rotate > .wrap { border-right: 0.08em solid #666 }",document.body.appendChild(o)};
-
 
     /* Accordion */
     var acc = document.getElementsByClassName("accordion");
