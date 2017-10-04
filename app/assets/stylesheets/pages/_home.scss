@@ -107,3 +107,27 @@ section.blue {
 .txt-rotate {
   color: $blue;
 }
+
+
+/* Banner Button Down*/
+#banner-button-down a {
+  margin: 0;
+  position: absolute;
+  top: 90%;
+  z-index: 2;
+  font-size: 15vmin;
+  text-shadow:2px 2px 0 rgba(0,0,0,0.4);
+}
+#banner-button-down a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}

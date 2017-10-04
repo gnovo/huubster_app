@@ -11,19 +11,19 @@
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           <% if I18n.locale == :pt %>
-            <li class="navbar-li"><%= link_to 'TORNE-SE UM PARCEIRO'.html_safe, partners_path,  id: "navbar-partner" %></li>
-            <li class="navbar-li"><%= link_to 'COMO FUNCIONA'.html_safe, about_path, class: "navbar-huubster-item navbar-huubster-link" %></li>
-            <li class="navbar-li"><%= link_to 'PREÇOS'.html_safe, pricing_path, class: "navbar-huubster-item navbar-huubster-link" %></li>
-            <li class="navbar-li"><%= link_to 'CRÍTICAS'.html_safe, pricing_path, class: "navbar-huubster-item navbar-huubster-link" %></li>
-            <li class="navbar-li"><%= link_to 'MARCAÇÃO'.html_safe, pricing_path, class: "navbar-huubster-item navbar-huubster-link" %></li>
-            <li class="navbar-li"><%= link_to 'FAQ'.html_safe, faq_path, class: "navbar-huubster-item navbar-huubster-link" %></li>
+            <li class="navbar-li"><%= link_to 'TORNE-SE UM PARCEIRO', partners_path,  id: "navbar-partner" %></li>
+            <li class="navbar-li"><a href="/#how-works">COMO FUNCIONA</a></li>
+            <li class="navbar-li"><a href="/#pricing">PREÇOS</a></li>
+            <li class="navbar-li"><a href="/#reviews">CRÍTICAS</a></li>
+            <li class="navbar-li"><a href="/#booking">MARCAÇÃO</a></li>
+            <li class="navbar-li"><a href="/#faq">FAQ</a></li>
           <% else %>
-            <li class="navbar-li"><%= link_to 'BECOME A PARTNER'.html_safe, about_path, id: "navbar-huubster-partner" %></li>
-            <li class="navbar-li"><%= link_to 'HOW IT WORKS'.html_safe, about_path, class: "navbar-huubster-item navbar-huubster-link" %></li>
-            <li class="navbar-li"><%= link_to 'PRICING'.html_safe, pricing_path, class: "navbar-huubster-item navbar-huubster-link" %></li>
-            <li class="navbar-li"><%= link_to 'REVIEWS'.html_safe, pricing_path, class: "navbar-huubster-item navbar-huubster-link" %></li>
-            <li class="navbar-li"><%= link_to 'BOOKING'.html_safe, pricing_path, class: "navbar-huubster-item navbar-huubster-link" %></li>
-            <li class="navbar-li"><%= link_to 'FAQ'.html_safe, faq_path, class: "navbar-huubster-item navbar-huubster-link" %></li>
+            <li class="navbar-li"><%= link_to 'BECOME A PARTNER', partners_path, id: "navbar-huubster-partner" %></li>
+            <li class="navbar-li"><a href="/#how-works">HOW IT WORKS</a></li>
+            <li class="navbar-li"><a href="/#pricing">PRICING</a></li>
+            <li class="navbar-li"><a href="/#reviews">REVIEWS</a></li>
+            <li class="navbar-li"><a href="/#booking">BOOKING</a></li>
+            <li class="navbar-li"><a href="/#faq">FAQ</a></li>
           <% end %>
         </ul>
         <ul class="nav pull-right navbar-nav">
