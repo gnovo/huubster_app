@@ -1,76 +1,56 @@
-/* Main navbar */
-.navbar-huubster {
-  background-color: transparent;
-  transition: all 0.3s ease;
-  height: 70px;
-  padding: 0px 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+// html,body {
+//   height:100%;
+// }
 
-/* Logo */
-.navbar-huubster-brand img {
-  height: 25px;
+// .first {
+//   height:100vh;
+//   min-height:400px;
+//   background-size:cover;
+  // background-image:url('https://images.unsplash.com/photo-1470434151738-dc5f4474c239?dpr=1&auto=format&crop=entropy&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb');
+// }
+.navbar-header img {
+  height: 30px;
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+  }
 }
-
-/* User Avatar */
-.navbar-huubster .avatar {
-  height: 35px;
-  width: 35px;
-  border-radius: 50%;
-}
-
-/* Right section */
-.navbar-huubster-right {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* Basic navbar item */
-.navbar-huubster-item {
-  cursor: pointer;
-  padding: 0 20px;
-}
-
-/* Navbar link */
-.navbar-huubster-link {
-  color: #616668;
+.navbar-li {
   font-size: 14px;
 }
-.navbar-huubster-link:hover {
-  color: #da552f;
-  text-decoration: none;
+.affix-top .nav>li>a {
+  color: $white;
 }
 
-/* Dropdown menu */
-.navbar-huubster-dropdown-menu {
-  margin-top: 15px;
-  box-shadow: 1px 1px 4px #E6E6E6;
-  border-color: #E6E6E6;
+.affix-top.navbar .nav>li>a:hover,
+.affix-top.navbar .navbar-brand
+{
+  color: #333;
 }
-.navbar-huubster-dropdown-menu li > a {
-  transition: color 0.3s ease;
-  font-weight: lighter !important;
-  color: #999999 !important;
-  font-size: 15px !important;
-  line-height: 22px !important;
-  padding: 10px 20px;
+.affix {
+  -webkit-transition:padding 0.2s ease-out;
+  -moz-transition:padding 0.2s ease-out;  
+  -o-transition:padding 0.2s ease-out;         
+  transition:padding 0.2s ease-out;
+
 }
-.navbar-huubster-dropdown-menu li > a:hover {
-  background: transparent !important;
-  color: black !important;
+@media (min-width:768px) {
+  .affix-top {
+    /* navbar style at top */
+    background:transparent;
+    border-color:transparent;
+    padding: 15px;
+    -webkit-transition:all 0.5s ease;
+    -moz-transition:all 0.5s ease; 
+    -o-transition:all 0.5s ease;         
+    transition:all 0.5s ease;  
+  }
 }
-.navbar-huubster-dropdown-menu:before {
-  content: ' ';
-  height: 10px;
-  width: 10px;
-  position: absolute;
-  right: 10px;
-  top: -6px;
-  background-color: white;
-  transform: rotate(45deg);
-  border-left: 1px solid #E6E6E6;
-  border-top: 1px solid #E6E6E6;
-}
+// #navbar-partner {
+//   border: 1px solid $white;
+// }
+
+// section {
+//   height:calc(90% - 50px);
+//   height: 90vh;
+// }

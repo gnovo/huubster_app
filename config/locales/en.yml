@@ -2,10 +2,6 @@ en:
   home:
     banner_heading: "Is buying a used car giving you a headache?"
     banner_subheading: "We know all about"
-    banner_subheading_word1: "brakes"
-    banner_subheading_word2: "clutch oil"
-    banner_subheading_word3: "shift levers"
-    banner_subheading_word4: "headlights"
     button_bookings: "Book an assessment"
 
     how_works: "How Does It Work?"
@@ -22,31 +18,44 @@ en:
     pricing: "Pricing"
     # Home Pricing partial
     assessment_1_price: "€59"
-    assessment_1_location: "ON-THE SPOT ASSESSMENT"
-    assessment_1_tag: "A mais flexível"
+    assessment_1_location: "ON-THE-SPOT ASSESSMENT"
+    assessment_1_tag: "The most flexible"
     assessment_2_price: "€89"
-    assessment_2_location: "ASSESSMENT"
-    assessment_2_tag: "A mais completa"
-    assessment_p1_html: "Condições de <strong>interiores</strong>"
-    assessment_p2_html: "Condições de <strong>exteriores</strong>"
-    assessment_p3_html: "Funcionamento eléctrico"
-    assessment_p4_html: "Aspectos mecânicos"
-    assessment_p5_html: "Estimativa dos custos de arranjo"
-    assessment_p6_html: "Informação sobre valor de mercado"
-    assessment_p7_html: "<strong>Vamos ter contigo</strong> onde quiseres"
-    assessment_p8_html: "Diagnóstico electrónico"
-    assessment_p9_html: "Orçamento dos custos de arranjo"
-    assessment_p10_html: "15% de desconto nos arranjos"
-    assessment_p11_html: "Orçamento dos custos de arranjo"
-    assessment_p12_html: "<strong>Vens ter connosco</strong> a Odivelas"
+    assessment_2_location: "WORKSHOP ASSESSMENT"
+    assessment_2_tag: "The most complete"
+    assessment_p1_html: "<strong>Interior</strong> conditions"
+    assessment_p2_html: "<strong>Exterior</strong> conditions"
+    assessment_p3_html: "<strong>Electric</strong> conditions"
+    assessment_p4_html: "<strong>Mechanical</strong> conditions"
+    assessment_p5_html: "Estimate of setup costs"
+    assessment_p6_html: "Information on market value"
+    assessment_p7_html: "<strong>We come to you</strong> wherever you want"
+    assessment_p8_html: "Electronic diagnosis"
+    assessment_p9_html: "Repairment cost budget"
+    assessment_p10_html: "15% off on repairments"
+    assessment_p11_html: "Repairment cost budget"
+    assessment_p12_html: "<strong>You come to us</strong> in Odivelas"
 
+    location: "Locatĩon"
+
+    # Home Client Reviews partial
     client_reviews: "What our clients say about us"
+    client_name_1: "Marta Filipa"
+    client_city_1: "Lisbon"
+    client_review_1: "When I thought about buying a car, I knew what I wanted: a smart! But I also knew those cars could be very costly and require many trips to the workshop if I didn't know exactly what I was buying. Thank you Huubster for the excellent work, for analyzing things that I never thought were important but above all, thanks for the confidence I felt when buying my first car! Wish you all the best!!!"
+    client_name_2: "João Andrade"
+    client_city_2: "Cascais"
+    client_review_2: "When I thought about buying a car, I knew what I wanted: a smart! But I also knew those cars could be very costly and require many trips to the workshop if I didn't know exactly what I was buying. Thank you Huubster for the excellent work, for analyzing things that I never thought were important but above all, thanks for the confidence I felt when buying my first car! Wish you all the best!!!"
+    client_name_3: "Ricardo Braga"
+    client_city_3: "Estoril"
+    client_review_3: "When I thought about buying a car, I knew what I wanted: a smart! But I also knew those cars could be very costly and require many trips to the workshop if I didn't know exactly what I was buying. Thank you Huubster for the excellent work, for analyzing things that I never thought were important but above all, thanks for the confidence I felt when buying my first car! Wish you all the best!!!"
 
-    press_news: "They talk about Huubster"
+    # Home Media Reviews partial
+    media_reviews: "They talk about Huubster"
 
     bookings: "Bookings"
 
-    faq: "Perguntas Frequentes"
+    faq: "FAQ"
     # Home FAQ partial
     question_1: "Com que tempo de antecedência devo pedir a avaliação?"
     answer_1: "48h de antecedência, no mínimo, para garantirmos que conseguimos arranjar o mecânico certo para ti."
@@ -60,8 +69,8 @@ en:
     answer_5: "A avaliação inclui parâmetros."
 
     interested: "Interessado?"
-    interested_p1: "Estamos sempre disponíveis para conversar contigo ou responder às tuas questões na nossa plataforma, Facebook, ou através de email."
-    interested_p2: "Quer estejas a pensar comprar um carro, ou apenas queiras dizer olá, estamos aqui para ti."
+    interested_p1: "We're always available to hear about you or answer your questions on our web platform, Facebook, or through email."
+    interested_p2: "If you are considering buying a car, or just want to say hi, we're here for you."
 
   privacy:
   terms:
