@@ -4,14 +4,17 @@
   <section class="cd-intro">
     <h2 class="cd-headline rotate-1">
       <span class="text-white"><%= t('home.banner_subheading') %></span>
-      <span class="txt-rotate" data-period="2000" data-rotate='[ "motores", "travões", "óleo da embraiagem", "alavancas de velocidades" ]'></span>
-      <!-- <span class="txt-rotate" data-period="2000" data-rotate='<%= [ "t('banner_subheading_word1_html')" ]%>' ></span> -->
-      <!-- <span class="text-white">.</span> -->
+      <% if I18n.locale == :pt %>
+        <span class="txt-rotate" data-period="2000" data-rotate='[ "carros", "motores", "travões", "óleo da embraiagem", "alavancas de velocidades", "faróis" ]'></span>
+      <% else %>
+        <span class="txt-rotate" data-period="2000" data-rotate='[ "cars", "engines", "brakes", "clutch oil", "shift levers", "headlights" ]'></span>
+      <% end %>
     </h2>
   </section>
 
-  <button type="button" class="btn btn-primary btn-lg"><%= t('home.button_bookings') %></button>
+  <button type="button" class="btn btn-primary btn-lg container"><%= t('home.button_bookings') %></button>
   <%= video_tag("banner_home.mp4", autoplay: true, loop: true) %>
+  <h6><i class="fa fa-angle-down" aria-hidden="true"></i></h6>
 </div>
 
 <div class="container">
