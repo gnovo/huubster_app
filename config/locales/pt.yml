@@ -1,6 +1,6 @@
 pt:
   home:
-    banner_heading: "Comprar um carro usado está a dar-te dores de cabeça?"
+    banner_heading: "Comprar um carro usado não tem de ser um bicho de sete cabeças"
     banner_subheading: "Sabemos tudo sobre"
     button_bookings: "Marca uma avaliação"
 
@@ -53,7 +53,7 @@ pt:
     # Home Media Reviews partial
     media_reviews: "Eles falam sobre a Huubster"
 
-    bookings: "Marcações"
+    bookings: "Marcação"
 
     faq: "FAQ"
     # Home FAQ partial

@@ -13,39 +13,58 @@
   </section>
 
   <button type="button" class="btn btn-primary btn-lg container"><%= t('home.button_bookings') %></button>
-  <%= video_tag("banner_home.mp4", autoplay: true, loop: true) %>
-  <h6><i class="fa fa-angle-down" aria-hidden="true"></i></h6>
+  <%= video_tag("banner_home1.mp4", autoplay: true, loop: true) %>
+  <!-- <h6><i class="fa fa-angle-down" aria-hidden="true"></i></h6> -->
+  <section id="banner-button-down" class="demo">
+    <a href="#how-works"><span></span></a>
+  </section>
 </div>
 
-<div class="container">
-  <h3 class="subheading text-center"><%= t('home.how_works') %></h3>
-  <%= render "how_works" %>
-</div>
-
-<div class="pricing">
+<section id="how-works" style="padding-top: 60px">
   <div class="container">
-    <h3 class="subheading text-center"><%= t('home.pricing') %></h3>
-    <%= render "pricing" %>
+    <h3 class="subheading text-center"><%= t('home.how_works') %></h3>
+    <%= render "how_works" %>
   </div>
-</div>
+</section>
 
-<div class="container">
-  <h3 class="subheading text-center"><%= t('home.client_reviews') %></h3>
-</div>
-<%= render "review_clients" %>
+<section id="pricing" class="pricing" style="padding-top: 60px; padding-bottom: 60px">
+  <div>
+    <div class="container">
+      <h3 class="subheading text-center text-white" style="padding-bottom: 12px"><%= t('home.pricing') %></h3>
+      <%= render "pricing" %>
+    </div>
+  </div>
+</section>
 
-<div class="interested">
+<section id="reviews" class="interested" style="padding-top: 60px">
   <div class="container">
-    <h3 class="subheading text-center"><%= t('home.media_reviews') %></h3>
-    <%= render "review_media" %>
-</div>
+    <h3 class="subheading text-center"><%= t('home.client_reviews') %></h3>
+  </div>
+  <%= render "review_clients" %>
 
+  <div class="interested">
+    <div class="container">
+      <h3 class="subheading text-center"><%= t('home.media_reviews') %></h3>
+      <%= render "review_media" %>
+    </div>
+  </div>
+</section>
+
+<section id="booking" style="padding-top: 60px">
+  <div class="container">
+    <h3 class="subheading text-center"><%= t('home.bookings') %></h3>
+  </div>
+  <%= render "booking" %>
+</section>
+
+<section id="faq" style="padding-top: 60px">
 <div class="interested">
   <div class="container">
     <h3 class="subheading text-center"><%= t('home.faq') %></h3>
     <%= render "faq" %>
   </div>
 </div>
+</section>
 
 <div class="interested">
   <div class="container">

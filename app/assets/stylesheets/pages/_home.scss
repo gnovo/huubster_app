@@ -90,10 +90,13 @@ h6 {
 .home {
   margin-top: 75px;
 }
-.intro, .pricing, .interested {
-  background-color: rgb(245,245,245);
+.intro, .interested {
+  background-color: #e8e8e8;
 }
 
+.pricing {
+  background-color: $sea-serpent;
+}
 
 section.blue {
   background: blue;
@@ -106,4 +109,40 @@ section.blue {
 
 .txt-rotate {
   color: $blue;
+}
+
+
+/* Banner Button Down*/
+.demo a {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: $white;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: opacity .3s;
+}
+.demo a:hover {
+  opacity: .5;
+}
+#banner-button-down a {
+  // margin: 0;
+  // top: 90%;
+}
+#banner-button-down a span {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid $white;
+  border-bottom: 1px solid $white;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
 }
