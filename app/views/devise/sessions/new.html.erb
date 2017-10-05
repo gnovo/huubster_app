@@ -19,7 +19,7 @@
 <div class="container-fluid background" style="padding-top: 70px">
   <div class="container form-box">
     <h3 class="text-center" style="font-size: 65px; font-weight: 300">Login</h3>
-    <h5 class="text-center" style="padding-top: 10px; font-size: 20px; font-weight: 300"">Novo na Huubster? <%= link_to "Registre-se", new_registration_path(resource_name) %></h5>
+    <h5 class="text-center" style="padding-top: 10px; font-size: 20px; font-weight: 300"">Novo na Huubster? <%= link_to "Registra-te", new_registration_path(resource_name) %></h5>
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="form-inputs">
         <%= f.input :email, required: false, autofocus: true %>
