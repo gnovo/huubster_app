@@ -40,6 +40,11 @@
           <% end %>
           <!-- Login link (when logged out) -->
           <li class="navbar-li"><%= link_to t(".sign_in", default: "INICIAR SESSÃO"), new_user_session_path, class: "navbar-huubster-item navbar-huubster-link" %></li>
+          <li>
+            <%= link_to destroy_user_session_path, method: :delete do %>
+              <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+            <% end %>
+          </li>
         </ul>
       </div>
   </div>
