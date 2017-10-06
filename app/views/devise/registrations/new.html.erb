@@ -1,17 +1,40 @@
-<h2><%= t(".sign_up") %></h2>
+<style>
+  .btn-register {
+    background-color: transparent;
+    border: none;
+    border-radius: 999px;
+    padding-left: 30px;
+    padding-right: 30px; 
+    margin: 0;
+    font-size: 18px;
+    color: #143196;
+    box-shadow: inset 0 0 0 1px #143196;
+    cursor: pointer;
+  }
+  .btn-register:hover {
+    background-color: #143196;
+    color: white;
+  }
+</style>
+<div class="container-fluid background" style="padding-top: 70px">
+  <div class="container form-box">
+    <h3 class="text-center" style="font-size: 65px; font-weight: 300">Registrar</h3>
+    <h5 class="text-center" style="padding-top: 10px; font-size: 20px; font-weight: 300"">Já tens uma conta na Huubster? <%= link_to "Login", session_path(resource_name) %></h5>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <div class="form-inputs">
+        <%= f.input :email, required: true, autofocus: true %>
+        <%= f.input :password, required: true %>
+        <%= f.input :password_confirmation, required: true %>
+      </div>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+      <div class="form-actions">
+        <%= f.button :submit, t(".sign_up"), class: "btn-register" %>
+      </div>
+    <% end %>
 
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
-    <%= f.input :password, required: true %>
-    <%= f.input :password_confirmation, required: true %>
+ <!--    <%= render "devise/shared/links" %> -->
+    <div class="container-fluid">
+      <p class="text-center" style="font-weight: 300">* Ao te registares, concordas com os nossos <%= link_to 'Termos de Uso', terms_path %> e com a nossa <%= link_to 'Política de Privacidade', privacy_path %>. Também aceitas o uso de cookies da Huubster para te oferecer a melhor experiência enquanto usuário.</p>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, t(".sign_up") %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

@@ -19,11 +19,11 @@
             <li class="navbar-li"><a href="/#faq">FAQ</a></li>
           <% else %>
             <li class="navbar-li"><%= link_to 'BECOME A PARTNER', partners_path, id: "navbar-huubster-partner" %></li>
-            <li class="navbar-li"><a href="/#how-works">HOW IT WORKS</a></li>
-            <li class="navbar-li"><a href="/#pricing">PRICING</a></li>
-            <li class="navbar-li"><a href="/#reviews">REVIEWS</a></li>
-            <li class="navbar-li"><a href="/#booking">BOOKING</a></li>
-            <li class="navbar-li"><a href="/#faq">FAQ</a></li>
+            <li class="navbar-li"><a href="/en#how-works">HOW IT WORKS</a></li>
+            <li class="navbar-li"><a href="/en#pricing">PRICING</a></li>
+            <li class="navbar-li"><a href="/en#reviews">REVIEWS</a></li>
+            <li class="navbar-li"><a href="/en#booking">BOOKING</a></li>
+            <li class="navbar-li"><a href="/en#faq">FAQ</a></li>
           <% end %>
         </ul>
         <ul class="nav pull-right navbar-nav">
@@ -40,6 +40,11 @@
           <% end %>
           <!-- Login link (when logged out) -->
           <li class="navbar-li"><%= link_to t(".sign_in", default: "INICIAR SESSÃO"), new_user_session_path, class: "navbar-huubster-item navbar-huubster-link" %></li>
+          <li>
+            <%= link_to destroy_user_session_path, method: :delete do %>
+              <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+            <% end %>
+          </li>
         </ul>
       </div>
   </div>
@@ -52,6 +57,6 @@
       offset: {
         top: $('.cd-intro').offset().top
       }
-    }); 
+    });
   </script>
 <% end %>

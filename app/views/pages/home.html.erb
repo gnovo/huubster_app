@@ -14,7 +14,6 @@
 
   <button type="button" class="btn btn-primary btn-lg container"><%= t('home.button_bookings') %></button>
   <%= video_tag("banner_home1.mp4", autoplay: true, loop: true) %>
-  <!-- <h6><i class="fa fa-angle-down" aria-hidden="true"></i></h6> -->
   <section id="banner-button-down" class="demo">
     <a href="#how-works"><span></span></a>
   </section>
@@ -93,6 +92,15 @@
           panel.style.maxHeight = panel.scrollHeight + "px";
         } 
       }
-    }
+    };
+
+    /* Map */
+    // $(document).ready(function () {
+      // $('path').hover(
+      //   (function () {
+      //     // alert($(this).attr('id'));
+      //     alert($(this).attr('id'));
+      // }));
+    // });
   </script>
 <% end %>

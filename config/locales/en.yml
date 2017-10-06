@@ -14,6 +14,9 @@ en:
     how_works_sh_3: "Get a detailed professional assessment of the car from one of our specialists."
     how_works_h_4: "You decide what to do"
     how_works_sh_4: "Now that you have all the information, you can decide confidently!"
+    location_description: "Currently we make assessments in the Lisbon and Tagus south bank areas, but we are constantly adding new locations."
+    location_lisbon: "Lisbon area"
+    location_tagus: "Tagus south bank"
 
     pricing: "Pricing"
     # Home Pricing partial

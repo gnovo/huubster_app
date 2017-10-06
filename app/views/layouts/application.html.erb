@@ -13,6 +13,11 @@
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
+     <!--Start of Zendesk Chat Script-->
+    <script type="text/javascript">
+      window.$zopim||function(t,e){var s=$zopim=function(t){s._.push(t)},n=s.s=t.createElement(e),a=t.getElementsByTagName(e)[0];s.set=function(t){s.set._.push(t)},s._=[],s.set._=[],n.async=!0,n.setAttribute("charset","utf-8"),n.src="https://v2.zopim.com/?58T6zHlxxQ4UIXkmzrIp0IT4Saa91JvK",s.t=+new Date,n.type="text/javascript",a.parentNode.insertBefore(n,a)}(document,"script");
+    </script>
+    <!--End of Zendesk Chat Script-->
   </head>
   <body>
     <%= render 'shared/navbar' %>
