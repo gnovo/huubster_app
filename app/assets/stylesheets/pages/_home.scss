@@ -146,3 +146,14 @@ section.blue {
   transform: rotate(-45deg);
   box-sizing: border-box;
 }
+
+/* Home Map*/
+svg {
+  height: 25vw;
+}
+path {
+  fill: #d3d3d3; transition: .6s fill;
+}
+path:hover {
+  fill: $sea-serpent;
+}
