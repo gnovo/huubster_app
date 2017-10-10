@@ -105,33 +105,34 @@
 
     /* Map */
     $(function() {
-      $( document ).tooltip({
+      var doc = window.document
+      $(doc.document).tooltip({
         track: true,
         position: {
             my: "left top+20 center",
             at: "right center"
         }
     }); 
-    
-    $( "path" ).tooltip({
+
+    $("path").tooltip({
         items: ":not([disabled])",
         content: function() {
-            var title = $( this ).find( "title" ),
+            var title = $(this).find("title"),
                 content;
-            if ( title.length ) {
-                title.attr( "data-rect", $( this ).attr( "id" ) )
-                    .appendTo( "body" );
+            if (title.length) {
+                title.attr("data-rect", $(this).attr("id"))
+                    .appendTo("body");
             } else {
                 title = $( "[data-rect='" +
-                          $( this ).attr( "id" ) + "']" );
+                          $(this).attr("id") + "']");
             }
             return title.html();
         },
         track: true, 
         position: { 
             my: "left top+20 center", 
-            at: "right center" } 
+            at: "right center"} 
+          });
     });
-});
   </script>
 <% end %>
