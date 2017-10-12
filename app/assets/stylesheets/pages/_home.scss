@@ -1,26 +1,164 @@
-/* General CSS */
-* {
- font-family: 'Montserrat', sans-serif;
- font-size: 100%;
+/* Style for our header texts */
+h3 {
+  // font-size: 5em;
+  font-size: 50px;
+  color: $sea-serpent;
+  margin:0;
+  padding: 60px 0 20px 0;
+  // padding: 0; 
 }
-*, *:before, *:after {
-  box-sizing: inherit;
+.intro p {
+  // color: #fff;
 }
-.page-wrapper {
-  margin: 0 auto;
-  min-height: calc(100vh - 50px);
+.interest {
+  z-index: 10;
+}
+/* Centered texts in each section */
+// .section{
+//   text-align:center;
+// }
+
+/* Fixed header and footer. */
+#header {
+  position:fixed;
+  height: 50px;
+  display:block;
+  width: 100%;
+  // background: $white;
+  background: transparent;
+  z-index:9;
+  text-align:center;
+  color: $black;
+  // padding: 20px 0 0 0;
+  top:0px;
+  font-size: 14px;
 }
 
-.banner-wrapper {
-  width:100%;
-  height:100vh;
-  overflow: hidden;
-  video {
-    object-fit: cover;
-    width:100%;
-    height:100%;
+#header img {
+  height: 30px;
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
   }
 }
+
+
+
+
+
+
+#myVideo{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top:0;
+  right:0;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-color: black; /* in case the video doesn't fit the whole page*/
+  background-image: url("banner_home.png")/* our video */;
+  background-position: center center;
+  // background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover; /*cover video background */
+  z-index:3;
+}
+
+#myVideo:before {
+  content: '';
+  position: absolute;
+  background: rgba(250, 250, 250, 0.5);
+  border-radius: 5px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+
+
+/* Layer with position absolute in order to have it over the video
+* --------------------------------------- */
+#section0 .layer{
+  position: absolute;
+  z-index: 4;
+  width: 100%;
+  left: 0;
+  top: 43%;
+  
+
+
+/* 
+* Preventing flicker on some browsers 
+* See http://stackoverflow.com/a/36671466/1081396  or issue #183
+*/
+  -webkit-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+/*solves problem with overflowing video in Mac with Chrome */
+  #section0{
+  overflow: hidden;
+}
+
+
+
+/* Hiding video controls 
+* See: https://css-tricks.com/custom-controls-in-html5-video-full-screen/
+* --------------------------------------- */
+video::-webkit-media-controls {
+  display:none !important;
+}
+/* Banner Button Down*/
+.demo a {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  z-index: 99;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: $white;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: opacity .3s;
+  opacity: 0.7;
+}
+.demo a:hover {
+  opacity: 1;
+  color: $white;
+}
+#banner-button-down a {
+  // margin: 0;
+  // top: 90%;
+
+}
+#banner-button-down a span {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid $white;
+  border-bottom: 1px solid $white;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
 .banner-wrapper .overlay {
     height: 100%;
     width: 100%;
@@ -32,9 +170,7 @@
     background: $blue;
     opacity: 0.3;
 }
-video::-webkit-media-controls {
-  display:none !important;
-}
+
 h1, h2, h6 {
   margin: 0;
   position: absolute;
@@ -43,22 +179,17 @@ h1, h2, h6 {
   transform:translateY(-50%);
   width: 100%;
   text-align: center;
-  text-shadow:2px 2px 0 rgba(0,0,0,0.4);
+  color: $white;
+  // text-shadow:2px 2px 0 rgba(0,0,0,0.4);
 }
 h1 {
   top:30%;
   font-size: 48px;
 }
 h2 {
-  top:36%;
+  top:50%;
   font-size: 34px;
-  font-weight: 300;
-}
-p {
-  font-size: 16px;
-  line-height:1.7;
-  color: $black;
-  margin:20px;
+  font-weight: 300
 }
 .subheading {
   font-size: 42px;
@@ -76,95 +207,43 @@ p {
   border-radius: 40px;
   position: absolute;
   z-index: 3;
-  top:41%;
+  top:55%;
   left:45%;
   font-size: 14px;
-  text-shadow:2px 2px 0 rgba(0,0,0,0.4);
+  // text-shadow:2px 2px 0 rgba(0,0,0,0.4);
+  a {
+    color: $white;
+    text-decoration: none;
+  }
   &:hover {
     background-color: $blue;
     border-color: $blue;
     text-shadow:none;
   }
 }
-h6 {
-  top:95%;
-  font-size: 48px;
-  color: $white;
-  opacity: 0.5;
-  &:hover {
-    opacity: 1;
-  }
-}
-.text-white {
-  color: $white;
-}
-.home {
-  margin-top: 75px;
-}
-.intro, .interested {
-  background-color: #e8e8e8;
-}
-
-.pricing {
-  background-color: $sea-serpent;
-}
-
-section.blue {
-  background: blue;
-  height: 500px;
-}
-
-
-
-
-
 .txt-rotate {
   color: $blue;
 }
 
 
-/* Banner Button Down*/
-.demo a {
-  position: absolute;
-  bottom: 80px;
-  left: 50%;
-  z-index: 2;
-  display: inline-block;
-  -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-  color: $white;
-  letter-spacing: .1em;
-  text-decoration: none;
-  transition: opacity .3s;
+@media only screen and (max-width: 767px) {
+  h3 {
+    font-size: 25px;
+    padding: 60px 0 20px 0;
+    // padding: 0; 
 }
-.demo a:hover {
-  opacity: .5;
-}
-#banner-button-down a {
-  // margin: 0;
-  // top: 90%;
-}
-#banner-button-down a span {
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  width: 24px;
-  height: 24px;
-  margin-left: -12px;
-  border-left: 1px solid $white;
-  border-bottom: 1px solid $white;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  box-sizing: border-box;
-}
-
-/* Home Map*/
-svg {
-  height: 15vw;
-}
-path {
-  fill: #d3d3d3; transition: .6s fill;
-}
-path:hover {
-  fill: $sea-serpent;
+  .footer-statement {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    h3 {
+      font-size: 22px;
+    }
+  }
+  .footer-links {
+    padding-bottom: 10px;
+    a {
+      font-size: 14px;
+      padding: 0px 10px;
+    }
+  }
 }

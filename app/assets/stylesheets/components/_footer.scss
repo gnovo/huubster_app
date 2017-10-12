@@ -1,8 +1,15 @@
 .footer {
   background: rgb(43,43,46);
   padding: 0px 50px;
-  margin: 0 auto;
+  // margin: 0 auto;
+  margin-top: 250px;
   color: $white;
+  // bottom:0px;
+  // position: absolute;
+  // right: 0;
+  // bottom: 0;
+  // left: 0;
+  z-index: 9;
 }
 .footer-statement {
   padding-top: 70px;
@@ -10,6 +17,7 @@
   h3 {
     font-size: 38px;
     font-weight: 400;
+    color: $white;
   }
 }
 .footer-links {
@@ -72,7 +80,6 @@
     text-decoration: none;
   }
 }
-
 .child {
   display: inline-block;
   height: 120px;
@@ -87,4 +94,33 @@
 }
 .parent .child:hover {
   opacity: 1;
+}
+
+@media only screen and (max-width: 767px) {
+  .footer {
+    margin-top: 20px;
+  }
+  .footer-statement {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    h3 {
+      font-size: 22px;
+    }
+  }
+  .footer-links {
+    padding-bottom: 10px;
+    a {
+      padding: 0px 10px;
+    }
+  }
+  .footer-social {
+    padding-top: 20px;
+    a {
+      font-size: 18px;
+    }
+  }
+  .child {
+    height: 20px;
+    width: 50px;
+  }
 }

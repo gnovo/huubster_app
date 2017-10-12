@@ -1,62 +1,43 @@
-<div>
-  <div id="nav" class="navbar navbar-inverse navbar-fixed-top" data-spy="affix">
-      <div class="navbar-header">
+<div id="header">
+  <ul class="nav navbar-nav" id="menu">
+    <% if I18n.locale == :pt %>
+      <li data-menuanchor="partners">
         <%= link_to root_path do %>
           <%= image_tag("logo.png", alt: "Huubster") %>
         <% end %>
-        <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <i class="fa fa-bars"></i>
-        </a>
-      </div>
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-          <% if I18n.locale == :pt %>
-            <li class="navbar-li"><%= link_to 'TORNE-SE UM PARCEIRO', partners_path,  id: "navbar-partner" %></li>
-            <li class="navbar-li"><a href="/#how-works">COMO FUNCIONA</a></li>
-            <li class="navbar-li"><a href="/#pricing">PREÇOS</a></li>
-            <li class="navbar-li"><a href="/#reviews">CRÍTICAS</a></li>
-            <li class="navbar-li"><a href="/#booking">MARCAÇÃO</a></li>
-            <li class="navbar-li"><a href="/#faq">FAQ</a></li>
-          <% else %>
-            <li class="navbar-li"><%= link_to 'BECOME A PARTNER', partners_path, id: "navbar-huubster-partner" %></li>
-            <li class="navbar-li"><a href="/en#how-works">HOW IT WORKS</a></li>
-            <li class="navbar-li"><a href="/en#pricing">PRICING</a></li>
-            <li class="navbar-li"><a href="/en#reviews">REVIEWS</a></li>
-            <li class="navbar-li"><a href="/en#booking">BOOKING</a></li>
-            <li class="navbar-li"><a href="/en#faq">FAQ</a></li>
-          <% end %>
-        </ul>
-        <ul class="nav pull-right navbar-nav">
-          <% if I18n.locale == :pt %>
-            <li class="navbar-li"><%= link_to url_for(locale: :en), class: "navbar-huubster-item navbar-huubster-link"  do %>
-              <span class="fa fa-globe">&nbsp;&nbsp;</span>
-                PT
-            <% end %></li>
-          <% else %>
-            <li class="navbar-li"><%= link_to url_for(locale: :pt), class: "navbar-huubster-item navbar-huubster-link" do %>
-              <span class="fa fa-globe">&nbsp;&nbsp;</span>
-                EN
-            <% end %></li>
-          <% end %>
-          <!-- Login link (when logged out) -->
-          <li class="navbar-li"><%= link_to t(".sign_in", default: "INICIAR SESSÃO"), new_user_session_path, class: "navbar-huubster-item navbar-huubster-link" %></li>
-          <li>
-            <%= link_to destroy_user_session_path, method: :delete do %>
-              <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
-            <% end %>
-          </li>
-        </ul>
-      </div>
-  </div>
+      </li>
+      <li data-menuanchor="partners"><%= link_to 'TORNE-SE UM PARCEIRO', partners_path,  id: "navbar-partner" %></li>
+      <li data-menuanchor="firstPage"><a href="#how_works">COMO FUNCIONA</a></li>
+      <li data-menuanchor="secondPage"><a href="#pricing">PREÇOS</a></li>
+      <li data-menuanchor="3rdPage"><a href="#reviews">CRÍTICAS</a></li>
+      <li data-menuanchor="secondPage"><a href="#booking">MARCAÇÃO</a></li>
+      <li data-menuanchor="3rdPage"><a href="#faq">FAQ</a></li>
+    <% elsif I18n.locale == :en %>
+      <li data-menuanchor="firstPage"><a href="#how_works">HOW IT WORKS</a></li>
+      <li data-menuanchor="secondPage"><a href="#pricing">PRICING</a></li>
+      <li data-menuanchor="3rdPage"><a href="#reviews">REVIEWS</a></li>
+      <li data-menuanchor="secondPage"><a href="#booking">BOOKING</a></li>
+      <li data-menuanchor="3rdPage"><a href="#faq">FAQ</a></li>
+    <% end %>
+  </ul>
+  <ul class="nav pull-right navbar-nav">
+    <% if I18n.locale == :pt %>
+      <li class="navbar-li"><%= link_to url_for(locale: :en), class: "navbar-huubster-item navbar-huubster-link"  do %>
+        <span class="fa fa-globe">&nbsp;&nbsp;</span>
+          PT
+      <% end %></li>
+    <% else %>
+      <li class="navbar-li"><%= link_to url_for(locale: :pt), class: "navbar-huubster-item navbar-huubster-link" do %>
+        <span class="fa fa-globe">&nbsp;&nbsp;</span>
+          EN
+      <% end %></li>
+    <% end %>
+    <!-- Login link (when logged out) -->
+    <li class="navbar-li"><%= link_to t(".sign_in", default: "INICIAR SESSÃO"), new_user_session_path, class: "navbar-huubster-item navbar-huubster-link" %></li>
+    <li>
+      <%= link_to destroy_user_session_path, method: :delete do %>
+        <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+      <% end %>
+   </li>
+  </ul>
 </div>
-
-<% content_for :after_js do %>
-  <script>
-    /* affix the navbar after scroll below header */
-    $('#nav').affix({
-      offset: {
-        top: $('.cd-intro').offset().top
-      }
-    });
-  </script>
-<% end %>
