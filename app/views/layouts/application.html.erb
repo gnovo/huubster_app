@@ -3,16 +3,25 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!--     <title>Huubster - Avaliações Automóveis onde quiseres em Lisboa!</title> -->
     <title>Huubster - Avaliações Automóveis onde quiseres em Lisboa!</title>
+    <meta name="author" content="Gonçalo Novo | Huubster" />
+    <meta name="description" content="Avaliações Automóveis onde quiseres em Lisboa!" />
+    <meta name="keywords"  content="fullpage,jquery,demo,scroll,loop,continuous" />
+
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" /> -->
     <link rel="alternate" hreflang="pt" href="/">
     <link rel="alternate" hreflang="en" href="/en">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
     <%= favicon_link_tag %>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/scrolloverflow.min.js"></script>
      <!--Start of Zendesk Chat Script-->
     <script type="text/javascript">
       window.$zopim||function(t,e){var s=$zopim=function(t){s._.push(t)},n=s.s=t.createElement(e),a=t.getElementsByTagName(e)[0];s.set=function(t){s.set._.push(t)},s._=[],s.set._=[],n.async=!0,n.setAttribute("charset","utf-8"),n.src="https://v2.zopim.com/?58T6zHlxxQ4UIXkmzrIp0IT4Saa91JvK",s.t=+new Date,n.type="text/javascript",a.parentNode.insertBefore(n,a)}(document,"script");
@@ -20,13 +29,22 @@
     <!--End of Zendesk Chat Script-->
   </head>
   <body>
-    <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-    <div class="page-wrapper">
       <%= yield %>
-    </div>
-    <%= render 'shared/footer' %>
     <%= javascript_include_tag 'application' %>
     <%= yield(:after_js) %>
   </body>
 </html>
+
+
+<!--   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+  <script type="text/javascript" src="../vendors/scrolloverflow.js"></script>
+
+  <script type="text/javascript" src="../jquery.fullPage.js"></script>
+  <script type="text/javascript" src="examples.js"></script>
+
+  <script type="text/javascript">
+  </script>
+ -->

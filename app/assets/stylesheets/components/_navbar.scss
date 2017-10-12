@@ -14,9 +14,13 @@
   background: rgb(120,120,120);
   border-color: rgb(120,120,120);
 }
-.navbar-header img {
+.navbar-headr {
+  float: left;
+}
+.navbar-headr img {
   // padding-left: 10px;
   // padding-top: 10px;
+  // display: table;
   height: 30px;
   opacity: 0.8;
   &:hover {
@@ -29,13 +33,13 @@
 }
 .affix-top .nav>li>a {
   color: $white;
-  text-shadow:2px 2px 0 rgba(0,0,0,0.4);
+  // text-shadow:2px 2px 0 rgba(0,0,0,0.4);
 }
 
 .affix-top.navbar .nav>li>a:hover,
 .affix-top.navbar .navbar-brand
 {
-  color: #b4b4b4;
+  // color: #b4b4b4;
 }
 .affix {
   -webkit-transition:padding 0.2s ease-out;
@@ -57,12 +61,12 @@
   }
 }
 #navbar-partner {
-  box-shadow: inset 0 0 0 1px $white;
+  box-shadow: inset 0 0 0 1px $black;
   border-radius: 10px;
   &:hover {
-    background-color: $blue;
-    box-shadow: inset 0 0 0 1px $blue;
-    color: white;
+    background-color: #EEE;
+    box-shadow: inset 0 0 0 1px #EEE;
+    border-radius: 0px;
   }
 }
 
@@ -75,6 +79,10 @@
 .navbar-inverse .navbar-nav > li > a {
   color: $white;
   &:hover {
-    color: #b4b4b4;
+    // color: #b4b4b4;
   }
+}
+
+.nav .navbar-nav a:hover {
+  background-color: $white;
 }

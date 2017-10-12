@@ -10,9 +10,22 @@
   	display: block;
     margin-left: auto;
     margin-right: auto;
+    // width: 170px;
+    // height: 170px;
   }
 }
 .how-works {
   padding-left: 10px;
   padding-right: 10px;
+}
+/* Home Map*/
+svg {
+  // height: 15vw;
+  height: 30vw;
+}
+path {
+  fill: #d3d3d3; transition: .6s fill;
+}
+path:hover {
+  fill: $sea-serpent;
 }

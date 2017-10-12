@@ -1,106 +1,232 @@
-<div class="banner-wrapper">
-  <h1 class="text-white"><%= t('home.banner_heading') %></h1>
+<%= render 'shared/navbar' %>
 
-  <section class="cd-intro">
+<div id="fullpage">
+  <div class="section " id="section0">
+    <video id="myVideo" loop muted controls="false" data-autoplay>
+      <!-- <source data-src="/videos/banner_home.mp4" type="video/mp4"> -->
+      <!-- <source data-src="videos/flowers.webm" type="video/webm"> -->
+      <!-- <source data-src="https://streamable.com/gm7tm" type="video/mp4"> -->
+      <source data-src="/videos/banner_home.ogg" type="video/ogg">
+      <!-- <source data-src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg"> -->
+      
+
+    </video>
+    <div class="layer">
+      <h1><%= t('home.banner_heading') %></h1>
+    </div>
+
+    <section class="cd-intro">
     <h2 class="cd-headline rotate-1">
       <span class="text-white"><%= t('home.banner_subheading') %></span>
       <% if I18n.locale == :pt %>
         <span class="txt-rotate" data-period="2000" data-rotate='[ "carros", "motores", "travões", "óleo da embraiagem", "alavancas de velocidades", "faróis" ]'></span>
-      <% else %>
+      <% elsif I18n.locale == :en %>
         <span class="txt-rotate" data-period="2000" data-rotate='[ "cars", "engines", "brakes", "clutch oil", "shift levers", "headlights" ]'></span>
       <% end %>
     </h2>
-  </section>
+    </section>
 
-  <button type="button" class="btn btn-primary btn-lg container"><%= t('home.button_bookings') %></button>
-  <%= video_tag("banner_home2.mp4", autoplay: true, loop: true) %>
+  <li data-menuanchor="booking" class="btn btn-primary btn-lg container"><a href="#booking"><%= t('home.button_bookings') %></a></li>
+  <div class="overlay"></div>
+  <%= video_tag("banner_home.mp4", autoplay: true, loop: true, poster:"banner_home.png") %>
   <section id="banner-button-down" class="demo">
-    <a href="#how-works"><span></span></a>
+    <li data-menuanchor="firstPage"><a href="#how_works"><span></span></a></li>
   </section>
-</div>
-
-<section id="how-works" style="padding-top: 60px">
-  <div class="container">
-    <h3 class="subheading text-center"><%= t('home.how_works') %></h3>
-    <%= render "how_works" %>
   </div>
-</section>
+    
 
-<section id="pricing" class="pricing" style="padding-top: 60px; padding-bottom: 60px">
-  <div>
-    <div class="container">
-      <h3 class="subheading text-center text-white" style="padding-bottom: 12px"><%= t('home.pricing') %></h3>
-      <%= render "pricing" %>
+
+
+<!--   <div class="section" id="section1">
+    <div class="intro">
+      <h3><%= t('home.how_works') %></h3>
+      <%= render "how_works" %>
+    </div>
+  </div> -->
+
+  <div class="section" id="section1">
+    <div class="slide" data-anchor="1">
+      <h3><%= t('home.how_works') %></h3>
+      <%= render "how_works" %>
+    </div>
+    <div class="slide" data-anchor="2">
+      <h3><%= t('home.how_works_h_2') %></h3>
+      <%= render "how_works_2" %>
+    </div>
+    <div class="slide" data-anchor="3">
+      <h3><%= t('home.how_works_h_3') %></h3>
+      <%= render "how_works_3" %>
+    </div>
+    <div class="slide" data-anchor="4">
+      <h3><%= t('home.how_works_h_4') %></h3>
+      <%= render "how_works_4" %>
+    <div class="slide" data-anchor="localização">
+      <h3><%= t('home.location') %></h3>
+      <%= render "how_works_5" %>
+    </div>
     </div>
   </div>
-</section>
 
-<section id="reviews" class="interested" style="padding-top: 60px">
-  <div class="container">
-    <h3 class="subheading text-center"><%= t('home.client_reviews') %></h3>
-  </div>
-  <%= render "review_clients" %>
-
-  <div class="interested">
-    <div class="container">
-      <h3 class="subheading text-center"><%= t('home.media_reviews') %></h3>
-      <%= render "review_media" %>
+  <div class="section" id="section2">
+    <div class="slide" data-anchor="local">
+      <h3 style="font-size: 50px"><%= t('home.pricing') %></h3>
+        <%= render "pricing" %>
+    </div>
+    <div class="slide" data-anchor="oficina">
+      <h3 style="font-size: 50px"><%= t('home.pricing') %></h3>
+      <%= render "pricing_2" %>
     </div>
   </div>
-</section>
 
-<section id="booking" style="padding-top: 60px">
-  <div class="container">
-    <h3 class="subheading text-center"><%= t('home.bookings') %></h3>
+  <div class="section" id="section3">
+    <div class="slide" data-anchor="1">
+      <h3><%= t('home.client_reviews') %></h3>
+      <%= render "review_clients_1" %>
+    </div>
+    <div class="slide" data-anchor="2">
+      <h3><%= t('home.client_reviews') %></h3>
+      <%= render "review_clients_2" %>
+    </div>
+    <div class="slide" data-anchor="3">
+      <h3><%= t('home.client_reviews') %></h3>
+      <%= render "review_clients_3" %>
+    </div>
+    <div class="slide" data-anchor="4">
+      <h3><%= t('home.client_reviews') %></h3>
+      <%= render "review_clients_4" %>
+    </div>
+    <div class="slide" data-anchor="5">
+      <h3><%= t('home.client_reviews') %></h3>
+      <%= render "review_clients_5" %>
+    </div>
   </div>
-  <%= render "booking" %>
-</section>
 
-<section id="faq" style="padding-top: 60px">
-<div class="interested">
-  <div class="container">
-    <h3 class="subheading text-center"><%= t('home.faq') %></h3>
-    <%= render "faq" %>
+  <div class="section" id="section4">
+    <div class="intro">
+      <h3 style="font-size: 50px"><%= t('home.bookings') %></h3>
+    </div>
   </div>
-</div>
-</section>
 
-<div class="interested">
-  <div class="container">
-    <h3 class="subheading text-center"><%= t('home.interested') %></h3>
-    <p><%= t('home.interested_p1') %></p>
-    <p><%= t('home.interested_p2') %></p>
+  <div class="section" id="section5">
+    <div class="intro">
+      <h3 style="font-size: 50px"><%= t('home.faq') %></h3>
+      <%= render "faq" %>
+    </div>
+  </div>
+
+  <div class="section fp-auto-height-responsive" id="section6">
+    <div class="interested">
+      <h3 style="font-size: 50px"><%= t('home.interested') %></h3>
+      <%= render "interested" %>
+      <%= render 'shared/footer' %>
+    </div>
   </div>
 </div>
 
 <% content_for :after_js do %>
   <script>
-    /* Banner Animation */
-    var TxtRotate=function(t,e,i){this.toRotate=e,this.el=t,this.loopNum=0,this.period=parseInt(i,10)||2e3,this.txt="",this.tick(),this.isDeleting=!1};TxtRotate.prototype.tick=function(){var t=this.loopNum%this.toRotate.length,e=this.toRotate[t];this.isDeleting?this.txt=e.substring(0,this.txt.length-1):this.txt=e.substring(0,this.txt.length+1),this.el.innerHTML='<span class="wrap">'+this.txt+"</span>";var i=this,s=300-100*Math.random();this.isDeleting&&(s/=2),this.isDeleting||this.txt!==e?this.isDeleting&&""===this.txt&&(this.isDeleting=!1,this.loopNum++,s=500):(s=this.period,this.isDeleting=!0),setTimeout(function(){i.tick()},s)},window.onload=function(){for(var t=document.getElementsByClassName("txt-rotate"),e=0;e<t.length;e++){var i=t[e].getAttribute("data-rotate"),s=t[e].getAttribute("data-period");i&&new TxtRotate(t[e],JSON.parse(i),s)}var o=document.createElement("style");o.type="text/css",o.innerHTML=".txt-rotate > .wrap { border-right: 0.08em solid #666 }",document.body.appendChild(o)};
+    $(document).ready(function() {
+      /* --------------------------------------fullPage-------------------------------------- */
+      $('#fullpage').fullpage({
+        /* Navigation */
+        // menu: '#menu',
+        menu: true,
+        lockAnchors: false,
+        anchors:['intro', 'how_works', 'pricing', 'reviews', 'booking', 'faq', 'interested'],
+        navigation: false,
+        navigationPosition: 'right',
+        navigationTooltips: ['firstSlide', 'secondSlide'],
+        showActiveTooltip: false,
+        slidesNavigation: false,
+        slidesNavPosition: 'bottom',
 
-    /* Accordion */
-    var acc = document.getElementsByClassName("accordion");
-    var i;
+        /* Scrolling */
+        css3: true,
+        scrollingSpeed: 700,
+        autoScrolling: true,
+        fitToSection: true,
+        fitToSectionDelay: 1000,
+        scrollBar: false,
+        easing: 'easeInOutCubic',
+        easingcss3: 'ease',
+        loopBottom: false,
+        loopTop: false,
+        loopHorizontal: true,
+        continuousVertical: false,
+        continuousHorizontal: false,
+        scrollHorizontally: false,
+        interlockedSlides: false,
+        dragAndMove: false,
+        offsetSections: false,
+        resetSliders: false,
+        fadingEffect: false,
+        normalScrollElements: '#element1, .element2',
+        scrollOverflow: false,
+        scrollOverflowReset: false,
+        scrollOverflowOptions: null,
+        touchSensitivity: 15,
+        normalScrollElementTouchThreshold: 5,
+        bigSectionsDestination: null,
 
-    for (i = 0; i < acc.length; i++) {
-      acc[i].onclick = function() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.maxHeight){
-          panel.style.maxHeight = null;
-        } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
-        } 
-      }
-    };
+        /* Accessibility */
+        keyboardScrolling: true,
+        animateAnchor: true,
+        recordHistory: true,
 
-    /* Map */
-    // $(document).ready(function () {
-      // $('path').hover(
-      //   (function () {
-      //     // alert($(this).attr('id'));
-      //     alert($(this).attr('id'));
-      // }));
-    // });
+        /*Design */
+        controlArrows: true,
+        verticalCentered: true,
+        sectionsColor : ['#C63D0F', '#FFFFFF', '#E8E8E8', '#FFFFFF', '#E8E8E8', '#FFFFFF'],
+        paddingTop: '3em',
+        paddingBottom: '10px',
+        fixedElements: '#header',
+        responsiveWidth: 0,
+        responsiveHeight: 0,
+        // responsiveHeight: 650,
+        responsiveSlides: false,
+        parallax: false,
+        parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
+
+        /*Custom selectors */
+        sectionSelector: '.section',
+        slideSelector: '.slide',
+
+        lazyLoading: true,
+
+        /*events */
+        onLeave: function(index, nextIndex, direction){},
+        afterLoad: function(anchorLink, index){},
+        afterRender: function(){},
+        afterResize: function(){},
+        afterResponsive: function(isResponsive){},
+        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+        onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+      });
+      // $('#fullpage').fullpage({
+      //   anchors: ['intro', 'how_works', 'pricing', 'reviews', 'booking', 'faq', 'interested'],
+      //   sectionsColor: ['#C63D0F', '#FFFFFF', '#E8E8E8', '#FFFFFF', '#E8E8E8', '#FFFFFF'],
+      //   css3: true
+      // });
+      /* --------------------------------------fullPage-------------------------------------- */
+
+      /* Banner Animation */
+      var TxtRotate=function(t,e,i){this.toRotate=e,this.el=t,this.loopNum=0,this.period=parseInt(i,10)||2e3,this.txt="",this.tick(),this.isDeleting=!1};TxtRotate.prototype.tick=function(){var t=this.loopNum%this.toRotate.length,e=this.toRotate[t];this.isDeleting?this.txt=e.substring(0,this.txt.length-1):this.txt=e.substring(0,this.txt.length+1),this.el.innerHTML='<span class="wrap">'+this.txt+"</span>";var i=this,s=300-100*Math.random();this.isDeleting&&(s/=2),this.isDeleting||this.txt!==e?this.isDeleting&&""===this.txt&&(this.isDeleting=!1,this.loopNum++,s=500):(s=this.period,this.isDeleting=!0),setTimeout(function(){i.tick()},s)},window.onload=function(){for(var t=document.getElementsByClassName("txt-rotate"),e=0;e<t.length;e++){var i=t[e].getAttribute("data-rotate"),s=t[e].getAttribute("data-period");i&&new TxtRotate(t[e],JSON.parse(i),s)}var o=document.createElement("style");o.type="text/css",o.innerHTML=".txt-rotate > .wrap { border-right: 0.08em solid #666 }",document.body.appendChild(o)};
+
+      /* FAQ Accordion */
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight){
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        }
+      };
+    });
   </script>
 <% end %>
