@@ -1,34 +1,42 @@
-<div class="wrapper-how-works container" id="how-works">
-  <div class="how-works">
-    <%= image_tag("home_how_works/how_works1.png") %>
-    <h4 class="text-center" style="font-weight: 700; margin-top: 12.5px; margin-bottom: 12.5px"><%= t('home.how_works_h_1') %></h4>
-    <p class="text-center" id="how-works-p"><%= t('home.how_works_sh_1') %></p>
-  </div>
-  <div class="how-works">
-    <%= image_tag("home_how_works/how_works2.png") %>
-    <h4 class="text-center" style="font-weight: 700; margin-top: 12.5px; margin-bottom: 12.5px"><%= t('home.how_works_h_2') %></h4>
-    <p class="text-center"><%= t('home.how_works_sh_2') %></p>
-  </div>
-  <div class="how-works">
-    <%= image_tag("home_how_works/how_works3.png") %>
-    <h4 class="text-center" style="font-weight: 700; margin-top: 12.5px; margin-bottom: 12.5px"><%= t('home.how_works_h_3') %></h4>
-    <p class="text-center"><%= t('home.how_works_sh_3') %></p>
-  </div>
-  <div class="how-works">
-    <%= image_tag("home_how_works/how_works4.png") %>
-    <h4 class="text-center" style="font-weight: 700; margin-top: 12.5px; margin-bottom: 12.5px"><%= t('home.how_works_h_4') %></h4>
-    <p class="text-center"><%= t('home.how_works_sh_4') %></p>
-  </div>
-</div>
-
-<div class="text-center">
+<div class="container text-center">
   <p style="margin-top: 20px; margin-bottom: 20px"><%= t('home.location_description') %></p>
 </div>
 
-<div class="wrapper-how-works container" id="how-works">
+<div class="container visible-xs visible-sm">
+  <div class=row>
+    <div class="how-works col-xs-6">
+      <h4 class="text-center" style="font-weight: 700"><%= t('home.location_lisbon') %></h4>
+      <ul>
+        <li style="margin-top: 45px">AMADORA</li>
+        <li>CASCAIS</li>
+        <li>LISBOA</li>
+        <li>LOURES</li>
+        <li>ODIVELAS</li>
+        <li>OEIRAS</li>
+        <li>SINTRA</li>
+      </ul>
+    </div>
+    <div class="col-xs-6">
+      <h4 class="text-center" style="font-weight: 700"><%= t('home.location_tagus') %></h4>
+      <ul style="text-align: right">
+        <li>ALCOCHETE</li>
+        <li>ALMADA</li>
+        <li>BARREIRO</li>
+        <li>MOITA</li>
+        <li>MONTIJO</li>
+        <li>PALMELA</li>
+        <li>SEIXAL</li>
+        <li>SESIMBRA</li>
+        <li>SETÚBAL</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="wrapper-how-works container hidden-xs hidden-sm" id="how-works">
   <div class="how-works">
-    <h4 class="text-center" style="font-weight: 700; margin-bottom: 12.5px"><%= t('home.location_lisbon') %></h4>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 145 110" style="height: 15vw">
+    <h4 class="text-center" style="font-weight: 700"><%= t('home.location_lisbon') %></h4>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 145 110">
       <g><path
         id="OEIRAS"
         d="m 86.242,72.716998 -10.75,0 0,-4.33 -10.001,0 -2.642,2.09 0.552,0 -4.03,15.378 -2.393,0 0,7.844 1.12,0.504 11.425,-7.29 12.016,0 2.758,1.577 2.622,-6.482 0,-2.12 2.783,-2.783 0,-0.928 z"
@@ -140,8 +148,8 @@
     </svg>
   </div>
   <div class="how-works">
-    <h4 class="text-center" style="font-weight: 700; margin-bottom: 12.5px"><%= t('home.location_tagus') %></h4>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 145 110" style="height: 15vw">
+    <h4 class="text-center" style="font-weight: 700"><%= t('home.location_tagus') %></h4>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 145 110">
       <g><path
         d="m 91.462,84.652444 5.036,-7.08 -1.77,-2.993 0.948,0 -2.405,-1.273 -0.19,-1.996 -1.616,-1.52 1.616,-1.426 0.475,-5.323 1.33,-1.52 -1.995,-1.237 -1.046,1.806 -3.897,0 -5.418,3.232 -3.137,-2.662 -1.995,0 -1.332,2.567 -1.14,-1.9 -5.324,-0.19 -1.045,3.517 -9.127,0 -0.57,2.47 -4.087,0 -3.992,-4.086 -2.09,0 -4.85,-5.702 -1.793,0 0.37,5.513 -1.807,2.187 0,5.038 -1.996,4.467 1.71,4.088 1.332,-0.286 3.467,6.75 2.33,0 3.612,-3.232 0.38,-2.757 7.89,0 2.185,-5.798 0.95,-0.95 1.902,1.9 3.707,0 5.228,4.943 7.922,4.375 z"
         style="stroke:#66c4cd;stroke-opacity:1"/>

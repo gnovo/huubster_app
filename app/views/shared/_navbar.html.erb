@@ -1,7 +1,7 @@
-<div id="header">
+<!-- <div id="header">
   <ul class="nav navbar-nav" id="menu">
     <% if I18n.locale == :pt %>
-      <li data-menuanchor="partners">
+      <li data-menuanchor="partners" id="navbar-logo" >
         <%= link_to root_path do %>
           <%= image_tag("logo.png", alt: "Huubster") %>
         <% end %>
@@ -33,7 +33,7 @@
       <% end %></li>
     <% end %>
     <!-- Login link (when logged out) -->
-    <li class="navbar-li"><%= link_to t(".sign_in", default: "INICIAR SESSÃO"), new_user_session_path, class: "navbar-huubster-item navbar-huubster-link" %></li>
+<!--     <li class="navbar-li"><%= link_to t(".sign_in", default: "INICIAR SESSÃO"), new_user_session_path, class: "navbar-huubster-item navbar-huubster-link" %></li>
     <li>
       <%= link_to destroy_user_session_path, method: :delete do %>
         <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
@@ -41,3 +41,158 @@
    </li>
   </ul>
 </div>
+ -->
+
+
+
+
+
+    
+
+
+
+
+
+<section class="navigation">
+  <div class="nav-container">
+    <div class="brand">
+      <!-- <a href="#!">Logo</a> -->
+      <%= link_to root_path do %>
+        <%= image_tag("logo.png", alt: "Huubster") %>
+      <% end %>
+    </div>
+    <nav>
+      <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+      <ul class="nav-list">
+<!--         <li>
+          <a href="#!">Home</a>
+        </li> -->
+      <% if I18n.locale == :pt %>
+        <li data-menuanchor="partners"><%= link_to 'TORNE-SE UM PARCEIRO', partners_path,  id: "navbar-partner" %></li>
+        <li data-menuanchor="firstPage"><a href="#how_works">COMO FUNCIONA</a></li>
+        <li data-menuanchor="secondPage"><a href="#pricing">PREÇOS</a></li>
+        <li data-menuanchor="3rdPage"><a href="#reviews">CRÍTICAS</a></li>
+        <li data-menuanchor="secondPage"><a href="#booking">MARCAÇÃO</a></li>
+        <li data-menuanchor="3rdPage"><a href="#faq">FAQ</a></li>
+      <% elsif I18n.locale == :en %>
+        <li data-menuanchor="partners"><%= link_to 'BECOME A PARTNER', partners_path,  id: "navbar-partner" %></li>
+        <li data-menuanchor="firstPage"><a href="#how_works">HOW IT WORKS</a></li>
+        <li data-menuanchor="secondPage"><a href="#pricing">PRICING</a></li>
+        <li data-menuanchor="3rdPage"><a href="#reviews">REVIEWS</a></li>
+        <li data-menuanchor="secondPage"><a href="#booking">BOOKING</a></li>
+        <li data-menuanchor="3rdPage"><a href="#faq">FAQ</a></li>
+      <% end %>
+
+
+<!--         <li>
+          <a href="#!">About</a>
+        </li>
+        <li>
+          <a href="#!">Services</a>
+          <ul class="nav-dropdown">
+            <li>
+              <a href="#!">Web Design</a>
+            </li>
+            <li>
+              <a href="#!">Web Development</a>
+            </li>
+            <li>
+              <a href="#!">Graphic Design</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#!">Pricing</a>
+        </li>
+        <li>
+          <a href="#!">Portfolio</a>
+          <ul class="nav-dropdown">
+            <li>
+              <a href="#!">Web Design</a>
+            </li>
+            <li>
+              <a href="#!">Web Development</a>
+            </li>
+            <li>
+              <a href="#!">Graphic Design</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#!">Contact</a>
+        </li> -->
+
+
+
+    </nav>
+    <nav id="nav-right" style="float: right; padding-right: 20px">
+      <ul class="nav-list">
+        <% if I18n.locale == :pt %>
+          <li class="navbar-li"><%= link_to url_for(locale: :en), class: "navbar-huubster-item navbar-huubster-link"  do %>
+            <span class="fa fa-globe">&nbsp;&nbsp;</span>
+              PT
+          <% end %></li>
+
+        <!-- Login link (when logged out) -->
+        <% if user_signed_in? %>
+          <li>
+            <%= link_to destroy_user_session_path, method: :delete do %>
+              <%= t(".sign_out", default: "TERMINAR SESSÃO") %>
+            <% end %>
+          </li>
+        <% else %>
+          <li class="navbar-li"><%= link_to t(".sign_in", default: "INICIAR SESSÃO"), new_user_session_path, class: "navbar-huubster-item navbar-huubster-link" %></li>
+        <% end %>
+
+
+      <% else %>
+        <li class="navbar-li"><%= link_to url_for(locale: :pt), class: "navbar-huubster-item navbar-huubster-link" do %>
+          <span class="fa fa-globe">&nbsp;&nbsp;</span>
+            EN
+        <% end %></li>
+
+        <!-- Login link (when logged out) -->
+        <% if user_signed_in? %>
+        <li>
+          <%= link_to destroy_user_session_path, method: :delete do %>
+            <%= t(".sign_out", default: "SIGN OUT") %>
+          <% end %>
+        </li>
+        <% else %>
+          <li class="navbar-li"><%= link_to t(".sign_in", default: "SIGN IN"), new_user_session_path, class: "navbar-huubster-item navbar-huubster-link" %></li>
+        <% end %>
+
+
+      <% end %>
+      </ul>
+    </nav> 
+  </div>
+</section>
+
+<% content_for :after_js do %>
+  <script>
+    (function($) { // Begin jQuery
+      $(function() { // DOM ready
+        // If a link has a dropdown, add sub menu toggle.
+        $('nav ul li a:not(:only-child)').click(function(e) {
+          $(this).siblings('.nav-dropdown').toggle();
+          // Close one dropdown when selecting another
+          $('.nav-dropdown').not($(this).siblings()).hide();
+          e.stopPropagation();
+        });
+        // Clicking away from dropdown will remove the dropdown class
+        $('html').click(function() {
+          $('.nav-dropdown').hide();
+        });
+        // Toggle open and close nav styles on click
+        $('#nav-toggle').click(function() {
+          $('nav ul').slideToggle();
+        });
+        // Hamburger to X toggle
+        $('#nav-toggle').on('click', function() {
+          this.classList.toggle('active');
+        });
+      }); // end DOM ready
+  })(jQuery); // end jQuery
+  </script>
+<% end %>

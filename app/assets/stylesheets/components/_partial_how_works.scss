@@ -21,11 +21,25 @@
 /* Home Map*/
 svg {
   // height: 15vw;
-  height: 30vw;
+  height: 25vw;
 }
 path {
   fill: #d3d3d3; transition: .6s fill;
 }
 path:hover {
   fill: $sea-serpent;
+}
+
+.how-works h4 {
+  font-weight: 900;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+
+@media only screen and (max-width: 767px) {
+  .how-works h4 {
+    font-size: 30px;
+  }
 }
