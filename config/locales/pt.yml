@@ -17,6 +17,10 @@ pt:
     location_description: "Neste momento fazemos avaliações na região de Lisboa e margem sul do Tejo, mas estamos em constante expansão pelo país. Fazemos avaliação em oficina em Odivelas."
     location_lisbon: "Região de Lisboa"
     location_tagus: "Margem sul do tejo"
+    how_works_alt_1: "Como Funciona - Diz-nos onde e quando"
+    how_works_alt_2: "Como Funciona - Connectamos-te com o mecânico certo para ti"
+    how_works_alt_3: "Como Funciona - Recebes as avaliações"
+    how_works_alt_4: "Como Funciona - Decides o que fazer"
 
     pricing: "Preços"
     # Home Pricing partial
@@ -38,6 +42,14 @@ pt:
     assessment_p10_html: "15% de desconto nos arranjos"
     assessment_p11_html: "Orçamento dos custos de arranjo"
     assessment_p12_html: "<strong>Vens ter connosco</strong> a Odivelas"
+    pricing_include_1: "Poder de negociação"
+    pricing_include_2: "Estimativa dos custos de arranjo"
+    pricing_include_3: "Feedback de um profissional"
+    pricing_alt_1: "Preços - Avaliação No Local"
+    pricing_alt_2: "Preços - Avaliação Em Oficina"
+    pricing_alt_3: "Poder de negociação"
+    pricing_alt_4: "Estimativa dos custos de arranjo"
+    pricing_alt_5: "Feedback de um profissional"
 
     location: "Localização"
 
@@ -61,10 +73,19 @@ pt:
     client_name_6: "João Cardoso"
     client_city_6: "Sintra"
     client_review_6: "Quando pensei em comprar carro, sabia o que queria: um smart! Mas também sabia que podiam ser carros de muita despesa e muitas idas à oficina caso não soubesse exactamente o que estava a comprar. Obrigada Huubster pelo excelente trabalho, por analisarem coisas que nunca tinha pensado serem importantes mas sobretudo, obrigada pela confiança que senti ao comprar o meu primeiro carro! Votos de muito sucesso!!!"
+    client_review_alt_1: "Comentário da Marta Filipa"
+    client_review_alt_2: "Comentário da Bárbara Reis"
+    client_review_alt_3: "Comentário do Ricardo Braga"
+    client_review_alt_4: "Comentário da Joana Sousa"
+    client_review_alt_5: "Comentário do Fernando Henriques"
+    client_review_alt_6: "Comentário do João Cardoso"
 
-    # Home Media Reviews partial
     media_reviews: "Eles falam sobre a Huubster"
-
+    media_reviews_alt_1: "Artigo no Sapo"
+    media_reviews_alt_2: "Artigo n'O Jornal Económico"
+    media_reviews_alt_3: "Artigo no Economia Online"
+    
+    # Home Bookings partial
     bookings: "Marcação"
 
     faq: "FAQ"

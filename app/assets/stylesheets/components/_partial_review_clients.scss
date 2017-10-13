@@ -72,23 +72,17 @@
   font-style: italic;
 }
 
-
 @media only screen and (max-width: 767px) {
-  .footer {
-    margin-top: 20px;
-  }
-  .footer-statement {
-    padding-top: 10px;
-    padding-bottom: 5px;
-    h3 {
-      font-size: 22px;
+  .wrapper-review-clients {
+    img {
+      width: 150px;
+      height: auto;
     }
   }
-  .footer-links {
-    padding-bottom: 10px;
-    a {
-      font-size: 14px;
-      padding: 0px 10px;
-    }
+  .scrollable-element{
+    height: 75px;
+    width: 300px;
+    overflow-y: scroll;
+    margin: 0 auto;
   }
 }

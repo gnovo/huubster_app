@@ -8,16 +8,15 @@
       <!-- <source data-src="https://streamable.com/gm7tm" type="video/mp4"> -->
       <source data-src="/videos/banner_home.ogg" type="video/ogg">
       <!-- <source data-src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg"> -->
-      
-
     </video>
+
     <div class="layer">
-      <h1><%= t('home.banner_heading') %></h1>
+      <h1 style="color: black"><%= t('home.banner_heading') %></h1>
     </div>
 
     <section class="cd-intro">
     <h2 class="cd-headline rotate-1">
-      <span class="text-white"><%= t('home.banner_subheading') %></span>
+      <span style="color: black"><%= t('home.banner_subheading') %></span>
       <% if I18n.locale == :pt %>
         <span class="txt-rotate" data-period="2000" data-rotate='[ "carros", "motores", "travões", "óleo da embraiagem", "alavancas de velocidades", "faróis" ]'></span>
       <% elsif I18n.locale == :en %>
@@ -26,23 +25,13 @@
     </h2>
     </section>
 
-  <li data-menuanchor="booking" class="btn btn-primary btn-lg container"><a href="#booking"><%= t('home.button_bookings') %></a></li>
-  <div class="overlay"></div>
-  <%= video_tag("banner_home.mp4", autoplay: true, loop: true, poster:"banner_home.png") %>
-  <section id="banner-button-down" class="demo">
-    <li data-menuanchor="firstPage"><a href="#how_works"><span></span></a></li>
-  </section>
+    <li data-menuanchor="booking" class="btn btn-primary btn-lg container"><a href="#booking"><%= t('home.button_bookings') %></a></li>
+    <div class="overlay"></div>
+    <%= video_tag("banner_home.mp4", autoplay: true, loop: true, poster:"banner_home.png") %>
+    <section id="banner-button-down" class="demo">
+      <li data-menuanchor="firstPage"><a href="#how_works"><span></span></a></li>
+    </section>
   </div>
-    
-
-
-
-<!--   <div class="section" id="section1">
-    <div class="intro">
-      <h3><%= t('home.how_works') %></h3>
-      <%= render "how_works" %>
-    </div>
-  </div> -->
 
   <div class="section" id="section1">
     <div class="slide" data-anchor="1">
@@ -50,33 +39,34 @@
       <%= render "how_works" %>
     </div>
     <div class="slide" data-anchor="2">
-      <h3><%= t('home.how_works_h_2') %></h3>
+      <h3><%= t('home.how_works') %></h3>
       <%= render "how_works_2" %>
     </div>
     <div class="slide" data-anchor="3">
-      <h3><%= t('home.how_works_h_3') %></h3>
+      <h3><%= t('home.how_works') %></h3>
       <%= render "how_works_3" %>
     </div>
     <div class="slide" data-anchor="4">
-      <h3><%= t('home.how_works_h_4') %></h3>
+      <h3><%= t('home.how_works') %></h3>
       <%= render "how_works_4" %>
+    </div>
+    <div class="slide" data-anchor="5">
+      <h3><%= t('home.how_works') %></h3>
+      <%= render "how_works_5" %>
     <div class="slide" data-anchor="localização">
       <h3><%= t('home.location') %></h3>
-      <%= render "how_works_5" %>
+      <%= render "how_works_6" %>
     </div>
     </div>
   </div>
 
   <div class="section" id="section2">
-    <div class="slide" data-anchor="local">
-      <h3 style="font-size: 50px"><%= t('home.pricing') %></h3>
-        <%= render "pricing" %>
-    </div>
-    <div class="slide" data-anchor="oficina">
-      <h3 style="font-size: 50px"><%= t('home.pricing') %></h3>
-      <%= render "pricing_2" %>
+    <div class="intro">
+      <h3><%= t('home.pricing') %></h3>
+      <%= render "pricing" %>
     </div>
   </div>
+
 
   <div class="section" id="section3">
     <div class="slide" data-anchor="1">
@@ -103,20 +93,20 @@
 
   <div class="section" id="section4">
     <div class="intro">
-      <h3 style="font-size: 50px"><%= t('home.bookings') %></h3>
+      <h3><%= t('home.bookings') %></h3>
     </div>
   </div>
 
   <div class="section" id="section5">
     <div class="intro">
-      <h3 style="font-size: 50px"><%= t('home.faq') %></h3>
+      <h3><%= t('home.faq') %></h3>
       <%= render "faq" %>
     </div>
   </div>
 
   <div class="section fp-auto-height-responsive" id="section6">
     <div class="interested">
-      <h3 style="font-size: 50px"><%= t('home.interested') %></h3>
+      <h3><%= t('home.interested') %></h3>
       <%= render "interested" %>
       <%= render 'shared/footer' %>
     </div>
@@ -160,7 +150,8 @@
         offsetSections: false,
         resetSliders: false,
         fadingEffect: false,
-        normalScrollElements: '#element1, .element2',
+        // normalScrollElements: '#element1, .element2',
+        normalScrollElements: '.scrollable-element, .scrollable-pricing',
         scrollOverflow: false,
         scrollOverflowReset: false,
         scrollOverflowOptions: null,
